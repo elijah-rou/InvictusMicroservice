@@ -20,4 +20,4 @@ class InvictusService():
     # RPC to apply odd_square to a list of integers
     @rpc
     def apply_odd_square(self, array):
-        return map(odd_square, array)
+        return list(map(odd_square, array))
