@@ -1,2 +1,3 @@
 *.pyc
 config.yml
+service_env/
