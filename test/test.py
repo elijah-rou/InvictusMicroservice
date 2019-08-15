@@ -3,8 +3,8 @@
 import sys
 sys.path.append("src/")
 
-import src.InvictusService as iserv 
-service = iserv.InvictusService()
+from InvictusService import InvictusService
+service = InvictusService()
 
 def test_odd_square():
     assert service.odd_square(0) == 0

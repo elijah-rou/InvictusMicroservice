@@ -12,8 +12,8 @@ class InvictusService():
     name = "invictus_service"
 
     # Function that squares a number if it's odd
-    def odd_square(number):
-        if (number % 2 == 0):
+    def odd_square(self, number):
+        if (number % 2 != 0):
             return number * number
         return number
 
