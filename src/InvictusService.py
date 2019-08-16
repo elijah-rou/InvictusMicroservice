@@ -7,9 +7,17 @@ Microservice that performs a variety of functions:
 # Nameko import
 from nameko.rpc import rpc, RpcProxy
 
+# Huffman encoder/decoder
+from dahuffman import HuffmanCodec
+
+### Use NLTK Gutenberg corpus to create a frequency distribution of letters
+### Use that to perform static Huffman encoding
+from nltk.corpus import gutenberg 
+
 # Define the service
 class InvictusService():
     name = "invictus_service"
+    codec = HuffmanCodec.from_data(gutenberg.raw())
 
     # Function that squares a number if it's odd
     def odd_square(self, number):
@@ -21,3 +29,17 @@ class InvictusService():
     @rpc
     def apply_odd_square(self, array):
         return list(map(self.odd_square, array))
+
+    # Function that takes a string and produces the huffman encoding
+    def to_huffman(string):
+        return {string: codec.encode(string)}
+
+    # RPC to apply to_huffman to a list of strings
+    @rpc 
+    def apply_to_huffman(array):
+        return list(map(self.to_huffman, array))
+
+   # RPC to decode a given Huffman encoded string 
+    @rpc
+    def decode_huffman(code):
+        return codec.decode(code)
