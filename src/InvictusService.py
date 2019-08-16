@@ -31,15 +31,15 @@ class InvictusService():
         return list(map(self.odd_square, array))
 
     # Function that takes a string and produces the huffman encoding
-    def to_huffman(string):
-        return {string: codec.encode(string)}
+    def to_huffman(self, string):
+        return {string: self.codec.encode(string)}
 
     # RPC to apply to_huffman to a list of strings
     @rpc 
-    def apply_to_huffman(array):
+    def apply_to_huffman(self, array):
         return list(map(self.to_huffman, array))
 
    # RPC to decode a given Huffman encoded string 
     @rpc
-    def decode_huffman(code):
-        return codec.decode(code)
+    def decode_huffman(self, code):
+        return self.codec.decode(code)
