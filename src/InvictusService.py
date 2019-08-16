@@ -5,7 +5,7 @@ Microservice that performs a variety of functions:
 3) Decode an encoded string
 '''
 # Nameko import
-from nameko.rpc import rpc, RpcProxy
+from nameko.rpc import rpc
 
 # Huffman encoder/decoder
 from dahuffman import HuffmanCodec
