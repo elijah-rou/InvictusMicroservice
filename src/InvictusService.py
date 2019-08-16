@@ -32,12 +32,12 @@ class InvictusService():
 
     # Function that takes a string and produces the huffman encoding
     def to_huffman(self, string):
-        return {string: self.codec.encode(string)}
-
-    # RPC to apply to_huffman to a list of strings
+        return (string, self.codec.encode(string))
+    
+    # RPC to apply to_huffman to a list of strings and return key-values
     @rpc 
     def apply_to_huffman(self, array):
-        return list(map(self.to_huffman, array))
+        return dict(map(self.to_huffman, array))
 
    # RPC to decode a given Huffman encoded string 
     @rpc
