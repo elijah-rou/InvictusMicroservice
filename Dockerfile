@@ -11,12 +11,8 @@ RUN apk add --no-cache --virtual .build-deps gcc musl-dev \
  && apk del .build-deps
 
 COPY config.yml ./
-#COPY run.sh ./
 COPY src/InvictusService.py ./
 COPY src/gutenberg_downloader.py ./
 
 RUN python3 gutenberg_downloader.py
 CMD nameko run --config config.yml InvictusService
-
-#RUN chmod +x ./run.sh
-#CMD ["./run.sh"]
