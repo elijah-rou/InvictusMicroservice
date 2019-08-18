@@ -1,4 +1,4 @@
 dahuffman
 nltk
 nameko
-pytest
+kombu==4.6.3
