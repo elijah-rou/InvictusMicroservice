@@ -1,3 +1,7 @@
 *.pyc
 service_env/
+<<<<<<< Updated upstream
 .vscode/
+=======
+.vscode/
+>>>>>>> Stashed changes

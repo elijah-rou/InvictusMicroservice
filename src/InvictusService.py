@@ -13,11 +13,11 @@ from dahuffman import HuffmanCodec
 ### Use NLTK Gutenberg corpus to create a frequency distribution of letters
 ### Use that to perform static Huffman encoding
 from nltk.corpus import gutenberg 
+codec = HuffmanCodec.from_data(gutenberg.raw())
 
 # Define the service
 class InvictusService():
     name = "invictus_service"
-    codec = HuffmanCodec.from_data(gutenberg.raw())
 
     # Function that squares a number if it's odd
     def odd_square(self, number):
@@ -32,7 +32,7 @@ class InvictusService():
 
     # Function that takes a string and produces the huffman encoding
     def to_huffman(self, string):
-        return (string, self.codec.encode(string))
+        return (string, codec.encode(string))
     
     # RPC to apply to_huffman to a list of strings and return key-values
     @rpc 
@@ -42,4 +42,4 @@ class InvictusService():
    # RPC to decode a given Huffman encoded string 
     @rpc
     def decode_huffman(self, code):
-        return self.codec.decode(code)
+        return codec.decode(code)
