@@ -3,7 +3,7 @@ Kombu 4.6.4 ain't working (needed to ssh in to linux system originally)
 Docker is confusing at first
 Default JSON serializer can't handle byte stream (change to pickle)
 Have to install gcc to install some pip packages in the container
-HOW DO YOU CONNECT TO A DOCKER NETWORK PFFFFFFFFFFFFFFFFF
+Thought you had to connect to docker network but you actually go through localhost
 
 # Commands
 virtualenv service_env
