@@ -1,2 +1,3 @@
 *.pyc
 service_env/
+.vscode/
