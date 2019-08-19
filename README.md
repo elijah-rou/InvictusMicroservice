@@ -65,10 +65,12 @@ NLTK in the container was also initially an issue (as the container doesn't come
 rectify the issue. I also spent some time trying to "connect" to the Docker network I created, but soon realised Docker abstracts the network
 away and you just connect to the container directly.
 
-> Time Distribution
-> > Setup + Learning nameko and pytest + Implementing odd_sqaure + Trying to fix kombu : 4.5 hours (Thursday)
-> > Implementing Huffman encoding + Changing the serialiser + Testing the service : 2 hours (Friday)
-> > Fixing Kombu + Learning Docker + Containerising the service : 2.5 hours (Sunday)
+### Time Distribution
+*Setup + Learning nameko and pytest + Implementing odd_sqaure + Trying to fix kombu* : **4.5 hours** (Thursday)
+
+*Implementing Huffman encoding + Changing the serialiser + Testing the service* : **2 hours** (Friday)
+
+*Fixing Kombu + Learning Docker + Containerising the service* : **2.5 hours** (Sunday)
 
 ## Design
 ### Huffman encoding method
