@@ -1,4 +1,4 @@
-# Invcitus Microservice
+# Invictus Microservice
 A small containerised micrsoservice that performs a variety of functions using *nameko*.
 
 Functions:
